@@ -1,38 +1,119 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1.3;
+  font-size: 18px;
+
+}
+
+.container{
+  max-width: 500px;
+  justify-content: space-around;
+  margin: 2rem auto;
+  padding: 1rem;
+
+}
+
+h2,h3{
+  text-transform: uppercase;
+  margin: 0.3rem 0;
+}
+h2{
   text-align: center;
+  margin: 0.6rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#budget-form{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid green;
+  padding: 2rem;
+  margin: 1rem 0;
+  
 }
 
-.App-link {
-  color: #61dafb;
+input{
+  margin: 1rem 0 0;
+  padding: 0.4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type = 'submit']{
+  display: inline-block;
+  width: 50%;
+}
+
+label{
+  text-transform: capitalize;
+}
+
+.budget-container-display {
+  margin: 1rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+}
+.display{
+
+  padding: 0.3em;
+}
+
+
+
+#expenses-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid red;
+  padding: 2rem;
+  margin: 1rem 0;
+  
+}
+
+#expenses-form label:nth-child(3){
+  margin-top: 1.5rem;
+}
+table{
+  border-collapse: collapse;
+  margin: 1rem 0 0;
+}
+table td,th{
+  padding: 0.5em 1rem;
+
+}
+#budget-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#expenses-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+ul{
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+}
+li{
+  display: flex;
+  justify-content: space-evenly;
+  width: 450px;
+  margin: 0.5rem auto;
+}
+li span{
+  width: 50%;
 }
